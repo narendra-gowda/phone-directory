@@ -35,6 +35,9 @@ function App() {
               <div className="grid-container" key={sub.id}>
                 <span className="grid-items">{sub.name}</span>
                 <span className="grid-items">{sub.phone}</span>
+                <div className="action-btn-container">  
+                 <button className="grid-del-btn">DELETE</button>
+                </div>
               </div>
             )
           })
