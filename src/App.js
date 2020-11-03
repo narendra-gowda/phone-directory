@@ -22,7 +22,7 @@ function App() {
   ]
   return (
     <Fragment>
-      <Header/>
+      <Header homePage="PHONE DIRECTORY" addPage="ADD SUBSCRIBER"/>
       <div className="body-container">
         <button className="add-btn">ADD</button>
         <div className="grid-container">
@@ -35,7 +35,7 @@ function App() {
               <div className="grid-container" key={sub.id}>
                 <span className="grid-items">{sub.name}</span>
                 <span className="grid-items">{sub.phone}</span>
-                <div className="action-btn-container">  
+                <div className="action-btn-container">
                  <button className="grid-del-btn">DELETE</button>
                 </div>
               </div>

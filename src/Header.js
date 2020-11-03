@@ -1,11 +1,23 @@
 import React from 'react';
 import './Header.css';
 
-const Header = function () {
-  
+
+// Class Component
+/*class Header extends React.Component {
+  render(){ 
+    return(
+     <div className="header">
+         {this.props.homePage}
+     </div>
+    )
+  }
+}*/
+
+// Functional Component
+const Header = function (param) {
   return(
     <div className="header">
-         Phone Directory
+         {param.homePage}
      </div>
   )
 }
