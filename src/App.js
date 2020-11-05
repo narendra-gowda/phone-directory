@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 import Header from './Header';
 import {Fragment} from 'react';
 import './App.css';
@@ -6,23 +6,32 @@ import './App.css';
 function deleteHandler(props) {
   alert(props);
 }
+// let subscribers = [
+//   { id: 1,
+//     name: 'Naren',
+//    phone: 9980636388
+//   },
+//   { id: 2,
+//     name: 'Deepu',
+//     phone: 1234567890
+//   },
+//   {
+//     id:3,
+//     name: 'Jinny',
+//     phone: 8125637264
+//   }
+// ]
 
-function App() {
-  let subscribers = [
-    { id: 1,
-      name: 'Naren',
-     phone: 9980636388
-    },
-    { id: 2,
-      name: 'Deepu',
-      phone: 1234567890
-    },
-    {
-      id:3,
-      name: 'Jinny',
-      phone: 8125637264
+class App extends Component {
+
+  constructor(){
+    super();
+    this.state = {
+      subscribers:[]
     }
-  ]
+  }
+  
+  render(){
   return (
     <Fragment>
       <Header heading="PHONE DIRECTORY"/>
@@ -33,7 +42,7 @@ function App() {
           <span className="grid-headings">PHONE</span>
         </div>
         {
-          subscribers.map(sub =>{
+          this.state.subscribers.map(sub =>{
             return(
               <div className="grid-container" key={sub.id}>
                 <span className="grid-items">{sub.name}</span>
@@ -47,8 +56,8 @@ function App() {
         }
       </div>
     </Fragment>
-  );
-  
+  );  
+  }
 }
 
 export default App;
