@@ -3,6 +3,9 @@ import Header from './Header';
 import {Fragment} from 'react';
 import './App.css';
 
+function deleteHandler(props) {
+  alert(props);
+}
 
 function App() {
   let subscribers = [
@@ -22,9 +25,9 @@ function App() {
   ]
   return (
     <Fragment>
-      <Header homePage="PHONE DIRECTORY" addPage="ADD SUBSCRIBER"/>
+      <Header heading="PHONE DIRECTORY"/>
       <div className="body-container">
-        <button className="add-btn">ADD</button>
+        <button className="add-btn custom-btn">ADD</button>
         <div className="grid-container">
           <span className="grid-headings">NAME</span>
           <span className="grid-headings">PHONE</span>
@@ -36,7 +39,7 @@ function App() {
                 <span className="grid-items">{sub.name}</span>
                 <span className="grid-items">{sub.phone}</span>
                 <div className="action-btn-container">
-                 <button className="grid-del-btn">DELETE</button>
+                 <button className="grid-del-btn" onClick={deleteHandler.bind(this, "Delete button clicked")}>DELETE</button>
                 </div>
               </div>
             )

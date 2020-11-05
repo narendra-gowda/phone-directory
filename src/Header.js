@@ -17,7 +17,7 @@ import './Header.css';
 const Header = function (param) {
   return(
     <div className="header">
-         {param.homePage}
+         {param.heading}
      </div>
   )
 }
