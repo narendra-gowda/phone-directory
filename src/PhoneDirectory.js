@@ -8,12 +8,7 @@ class PhoneDirectory extends Component{
   constructor(){
     super();
     this.state = {
-      subscriberList : [
-        { id: 1,
-              name: 'Naren',
-             phone: 9980636388
-            }
-      ]
+      subscriberList : []
     }
   }
 
@@ -27,7 +22,7 @@ class PhoneDirectory extends Component{
     subscriberList.push(newSubsciber);
     this.setState({subscriberList : subscriberList});
     console.log(this.state.subscriberList);
-    console.log("Phone Directory");
+    // console.log("Phone Directory");
   }
 
   deleteSubscriberHandler = (subscriberID) => {

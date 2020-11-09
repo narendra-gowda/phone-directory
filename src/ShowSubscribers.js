@@ -22,13 +22,13 @@ import {Link} from 'react-router-dom';
 
 class ShowSubscribers extends Component {
 
-  constructor(){
-    super();
-    this.state = {
-      subscribers:[]
-    }
-    console.log("Constructor called");
-  }
+  // constructor(){
+  //   super();
+  //   this.state = {
+  //     subscribers:[]
+  //   }
+  //   console.log("Constructor called");
+  // }
 
   // componentDidMount(){
   //   console.log("Mount called");
@@ -46,7 +46,7 @@ class ShowSubscribers extends Component {
   }
 
   render(){
-    console.log("Render called");
+    // console.log("Render called");
   return (
     <Fragment>
       <Header heading="PHONE DIRECTORY"/>
