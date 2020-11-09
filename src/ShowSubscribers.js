@@ -4,9 +4,6 @@ import {Fragment} from 'react';
 import './ShowSubscribers.css';
 import {Link} from 'react-router-dom';
 
-function deleteHandler(props) {
-  alert(props);
-}
 // let subscribers = [
 //   { id: 1,
 //     name: 'Naren',
@@ -44,6 +41,10 @@ class ShowSubscribers extends Component {
   //   this.setState({subscribers : subscribersList});
   //   console.log("state",this.state);
   // }
+  deleteButtonHandler = (subscriberID) => {
+    this.props.deleteSubscriberHandler(subscriberID);
+  }
+
   render(){
     console.log("Render called");
   return (
@@ -62,7 +63,7 @@ class ShowSubscribers extends Component {
                 <span className="grid-items">{sub.name}</span>
                 <span className="grid-items">{sub.phone}</span>
                 <div className="action-btn-container">
-                 <button className="grid-del-btn" onClick={deleteHandler.bind(this, "Delete button clicked")}>DELETE</button>
+                 <button className="grid-del-btn" onClick={this.deleteButtonHandler.bind(this, sub.id)}>DELETE</button>
                 </div>
               </div>
             )
