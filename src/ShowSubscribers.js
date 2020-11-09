@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import Header from './Header';
 import {Fragment} from 'react';
 import './ShowSubscribers.css';
+import {Link} from 'react-router-dom';
 
 function deleteHandler(props) {
   alert(props);
@@ -49,7 +50,7 @@ class ShowSubscribers extends Component {
     <Fragment>
       <Header heading="PHONE DIRECTORY"/>
       <div className="body-container">
-        <button className="add-btn custom-btn">ADD</button>
+        <Link to="/add"><button className="add-btn custom-btn">ADD</button></Link>
         <div className="grid-container">
           <span className="grid-headings">NAME</span>
           <span className="grid-headings">PHONE</span>
