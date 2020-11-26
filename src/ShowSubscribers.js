@@ -3,6 +3,7 @@ import Header from './Header';
 import {Fragment} from 'react';
 import './ShowSubscribers.css';
 import {Link} from 'react-router-dom';
+import { FaTrash } from 'react-icons/fa';
 
 // let subscribers = [
 //   { id: 1,
@@ -49,7 +50,7 @@ class ShowSubscribers extends Component {
     // console.log("Render called");
   return (
     <Fragment>
-      <Header heading="PHONE DIRECTORY"/>
+      <Header heading = "PHONE DIRECTORY" />
       <div className="body-container">
         <Link to="/add"><button className="add-btn custom-btn">ADD</button></Link>
         <div className="grid-container">
@@ -63,7 +64,8 @@ class ShowSubscribers extends Component {
                 <span className="grid-items">{sub.name}</span>
                 <span className="grid-items">{sub.phone}</span>
                 <div className="action-btn-container">
-                 <button className="grid-del-btn" onClick={this.deleteButtonHandler.bind(this, sub.id)}>DELETE</button>
+                 {/* <button className="grid-del-btn" onClick={this.deleteButtonHandler.bind(this, sub.id)}>DELETE<FaTrash /></button> */}
+                 <span className="grid-del-btn" onClick={this.deleteButtonHandler.bind(this, sub.id)}><FaTrash className="trash"/></span>
                 </div>
               </div>
             )

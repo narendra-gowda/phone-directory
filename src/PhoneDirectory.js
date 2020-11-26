@@ -14,6 +14,7 @@ class PhoneDirectory extends Component{
 
   addSubscriberHandler = (newSubsciber) => {
     let subscriberList = this.state.subscriberList;
+    if(newSubsciber.name !== '' && newSubsciber.phone !== ''){  //To avoid adding Empty entries
     if(subscriberList.length > 0){
       newSubsciber.id = subscriberList[subscriberList.length-1].id + 1;
     }else{
@@ -21,7 +22,8 @@ class PhoneDirectory extends Component{
     }
     subscriberList.push(newSubsciber);
     this.setState({subscriberList : subscriberList});
-    console.log(this.state.subscriberList);
+  }
+    // console.log(this.state.subscriberList);
     // console.log("Phone Directory");
   }
 
