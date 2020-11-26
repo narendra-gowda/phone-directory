@@ -37,7 +37,7 @@ class AddSubscriber extends Component{
     this.state.name === '' ? this.setState({nameValidation: 'dispBlock'}) : this.setState({nameValidation: 'dispNone'})
     this.state.phone === ''? this.setState({phoneValidation: 'dispBlock'}) : this.setState({phoneValidation: 'dispNone'})
     this.props.addSubscriberHandler(this.state);
-    if(this.state.name !=='' && this.state.phone !== '')    //To avoid redirecting without filling fields
+    if(this.state.name !=='' && this.state.phone !== '')    //To avoid redirecting without filling fields--
     this.props.history.push("/");
   }
   
